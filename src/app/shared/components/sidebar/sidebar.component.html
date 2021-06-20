@@ -1,0 +1,50 @@
+<div class="contenedor">
+    
+    <div class="cuentas_por_pagar" *ngIf="addPago.idServicio == 0; else infoPago">
+        <div class="titulo">
+            <span>Añadidas para pago</span>
+        </div>
+        <i class="fas fa-list"></i>
+        <p>Añade tus cuentas por pagar</p>
+        
+    </div>
+    <ng-template #infoPago >
+        <div class="cuentas_por_pagar">
+            <div class="titulo">
+                <span>Añadidas para pago</span>
+            </div>
+            <p>Cuentas por pagar: {{pagos.length}}</p>
+            
+            <ul>
+                <li *ngFor="let pago of pagos" class="list_item_deuda">{{pago.idServicio}} 
+                <div class="drop" >
+                    <button class="btn_eliminar_item" (click)="removePago(pago)"><i class="fas fa-window-close i_close"></i></button>
+                </div>
+            </li>
+                
+                
+            </ul>
+        </div>
+        
+    </ng-template>
+    <div class="total_a_pagar">
+        <p class="subtitulo">Total a pagar: {{deudaTotal | currency}}</p>
+        <div class="opciones_de_pago">
+            <button class="btn_pagar_con_go">Pagar con Go</button>
+        </div>
+        <div class="lista_bancos_disponibles">
+            <img *ngFor="let image of lista_bancos" src="{{image.path}}" alt="" class="logo_banco" >
+        </div>
+        <div class="info">
+            <p>Bancos disponibles para pagar con ServipagGo!. actualmente.</p>
+        </div>
+        <div class="pagar_otros_medios">
+            <button class="btn_pagar">Pagar con otros medios</button>
+            <div class="info">
+                <p>(*) Cuentas bancarias, tarjetas de crédito/ débito y casas comerciales.</p>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>

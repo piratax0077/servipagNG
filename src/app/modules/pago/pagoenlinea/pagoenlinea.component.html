@@ -1,0 +1,19 @@
+<div class="contenedor">
+    <div class="row">
+        <div class="col-md-8 col-xl-8">
+            <div class=" tablero_component">
+                <app-tablero-pago (añadirPago)="addPago($event)" (mensaje)="getMensaje($event)"></app-tablero-pago>
+            </div>
+        </div>
+        <div class="col-md-4 col-xl-4">
+            <div class="sidebar_component">
+                <app-sidebar [addPago]="pago" [mensaje]="mensaje"></app-sidebar>
+            </div>
+        </div>
+    </div>
+        
+        
+    
+</div>
+
+

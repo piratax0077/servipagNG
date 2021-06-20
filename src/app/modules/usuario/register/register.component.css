@@ -1,0 +1,307 @@
+.contenedor{
+    width: 100%;
+    margin: 0px auto;
+    min-height: 900px;
+    
+}
+
+.seccion1, .seccion2, .seccion3{
+    height: 400px;
+    width: 100%;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.seccion1{
+    background-image: url('../../../../assets/register.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.seccion1 .top,
+.seccion2 .top{
+    width: 70%;
+    margin: 0px auto;
+}
+
+.seccion1 .top h1,
+.seccion3 .top h1{
+    font-size: 55px;
+    text-shadow: 3px 3px 2px black;
+}
+
+.seccion1 .top p,
+.seccion3 .top p{
+    font-size: 28px;
+    text-shadow: 3px 3px 2px black;
+}
+
+.seccion1 .top .box{
+    background-color: #000;
+    padding: 20px;
+    width: 50%;
+    margin: 0px auto;
+    border-radius: 5px;
+}
+
+.seccion2{
+    background-color: #ffdd01;
+}
+
+.seccion2 .top .box_rut{
+    width: 38%;
+    margin: 0px auto;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #000;
+}
+
+.seccion2 .top .box_rut .input_rut{
+    border: none;
+   padding: 15px; 
+}
+
+.seccion2 .top p{
+    font-size: 27px;
+}
+
+.seccion3{
+    background-image: url('../../../../assets/playa_rocosa.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.seccion3 .box_residencia {
+width: 82%;
+height: 200px;
+margin: 0px auto;
+
+}
+
+.seccion3 .box_residencia .region{
+    float: left;
+    width: 45%;
+}
+
+.seccion3 .box_residencia .region label,
+.seccion3 .box_residencia .comuna label{
+    float: left;
+    color: #fff;
+    font-size: 22px;
+    text-shadow: 3px 3px 2px black;
+}
+
+.seccion3 .box_residencia .region select,
+.seccion3 .box_residencia .comuna select{
+    float: right;
+    width: 70%;
+}
+
+.seccion3 .box_residencia .comuna{
+    float: right;
+    width: 45%;
+}
+
+
+.seccion3 .box_residencia .comuna button{
+    float: right;
+    margin-top: 30px;
+    margin-left: 300px;
+}
+
+@media (max-width: 732px) {
+    .seccion1, .seccion2, .seccion3{
+        height: 468px;
+    }
+
+    .seccion1 .top .box, .seccion2 .top .box_rut{
+        width: 90%;
+    }
+
+    .seccion1 .top h1,
+    .seccion3 .top h1{
+        font-size: 45px;
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    .seccion1 .top p,
+    .seccion3 .top p{
+        font-size: 20px;
+    }
+
+    .seccion3 .box_residencia .region select,
+    .seccion3 .box_residencia .comuna select{
+        width: 100%;
+    }
+}
+
+@media (max-width: 641px) {
+    .seccion1 .top h1,
+    .seccion3 .top h1{
+        font-size: 40px;
+    }
+    
+    .seccion2 .top p{
+        font-size: 20px;
+    }
+    .seccion1 .top .box{
+        width: 100%;
+    }
+
+    .seccion2 .top .box_rut{
+        width: 100%;
+    }
+
+    .seccion3 .top p{
+        font-size: 17px;
+    }
+
+    .seccion3 .box_residencia .region select,
+    .seccion3 .box_residencia .comuna select{
+        width: 100%;
+    }
+}
+
+@media (max-width: 824px) {
+    .seccion1 .top .box{
+        width: 100%;
+    }
+
+    .seccion1 .top h1, .seccion3 .top h1{
+        font-size: 44px;
+    }
+
+    .seccion1 .top p, .seccion3 .top p{
+        font-size: 20px;
+    }
+
+    .seccion2 .top .box_rut{
+        width: 80%;
+    }
+
+    .seccion3 .box_residencia .region select, .seccion3 .box_residencia .comuna select{
+        width: 100%;
+    }
+}
+
+@media (max-width: 1025px) {
+    .seccion1 .top .box, .seccion2 .top .box_rut{
+        width: 100%;
+    }
+
+    .seccion3 .box_residencia .region select,
+    .seccion3 .box_residencia .comuna select{
+        width: 100%;
+    }
+}
+
+@media (max-width: 415px) {
+    .seccion1 .top h1, .seccion3 .top h1{
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .seccion1 .top p, .seccion3 .top p{
+        font-size: 18px;
+    }
+
+    .seccion2 .top .box_rut{
+        width: 85%;
+    }
+
+    .seccion2 .top p{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 412px) {
+    .seccion1, .seccion2, .seccion3{
+        height: 455px;
+    }
+
+    .seccion1 .top h1,
+    .seccion3 .top h1{
+        font-size: 35px;
+    }
+
+    .seccion3 .box_residencia .region label,
+    .seccion3 .box_residencia .comuna label{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 376px) {
+    .seccion1 .top h1,
+    .seccion3 .top h1{
+        font-size: 30px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .seccion1 .top p, .seccion3 .top p{
+        font-size: 17px;
+    }
+
+    .seccion2 .top p{
+        font-size: 17px;
+    }
+
+    .seccion2 .top .box_rut .input_rut{
+        width: 170px;
+    }
+}
+
+@media (max-width: 361px) {
+    .seccion1, .seccion2, .seccion3{
+        height: 420px;
+    }
+
+    .seccion1 .top h1,
+    .seccion3 .top h1{
+        font-size: 40px;
+    }
+
+    .seccion1 .top p,
+    .seccion3 .top p{
+        font-size: 14px;
+    }
+
+    .seccion1 .top .box,
+    .seccion2 .top .box_rut{
+        width: 100%;
+    }
+
+    .seccion2 .top p{
+        font-size: 18px;
+    }
+
+    .seccion3 .box_residencia .region label,
+    .seccion3 .box_residencia .comuna label{
+        font-size: 17px;
+    }
+
+    .seccion3 .box_residencia .region select,
+    .seccion3 .box_residencia .comuna select{
+        width: 100%;
+    }
+}
+
+@media (max-width: 321px) {
+    .seccion1 .top h1, .seccion3 .top h1{
+        font-size: 27px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .seccion2 .top .box_rut{
+        width: 100%;
+    }
+
+    .seccion2 .top .box_rut .input_rut{
+        width: 180px;
+    }
+}

@@ -1,0 +1,15 @@
+.contenedor{
+    width: 75%;
+    margin: 0px auto;
+    margin-top: 30px;
+}
+
+.contenedor .tablero_component{
+    width: 100%;
+}.contenedor .sidebar_component{
+    width: 100%;
+}
+
+@media (max-width: 1025px) {
+    
+}

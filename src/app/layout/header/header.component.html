@@ -1,0 +1,39 @@
+<header>
+    <div class="menu_left">
+
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <a href="" routerLink="/pago/home"><img
+                    src="https://ww3.servipag.com/pagoenlinea/wcm/connect/58ccbff6-fa42-490b-9b35-296d9b7917b4/logo+header+170x80px.svg?MOD=AJPERES&CACHEID=58ccbff6-fa42-490b-9b35-296d9b7917b4"
+                    alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto" >
+                    <li class="nav-item active">
+                        <a class="nav-link" href="" [routerLink]="['/info/home']">Cómo funciona</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Servipag Empresas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Canales de atención</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Corporativo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Sucursales</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </div>
+    <div class="menu_right">
+        <button class="btn_servipag">Mi servipag</button>
+        <button class="btn_pago" [routerLink]="['/pago/home/pagoenlinea']">Pago rápido</button>
+    </div>
+
+</header>

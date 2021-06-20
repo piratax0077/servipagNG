@@ -1,0 +1,115 @@
+
+.contenedor{
+    width: 100%;
+}
+.tarjeta{
+    width: 100%;
+    min-height: 230px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.imagen img{
+    width: 100%;
+    height: 140px;
+}
+
+.descripcion{
+    background-color: #eee;
+    height: 90px;
+    text-align: center;
+}
+
+.descripcion p{
+    line-height: 90px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.e_agua .titulo *{
+    float: left;
+}
+
+.e_agua .titulo{
+    width: 230px;
+    height: 55px;
+    background-color: #a0b3c2;
+    padding: 10px;
+}
+
+.e_agua .titulo p,
+.e_agua .titulo i
+{
+    font-size: 25px;
+    color: white;
+}
+
+.titulo p{
+    margin-left: 20px;
+}
+
+.titulo i{
+    margin-top: 7px;
+}
+
+.e_agua{
+    transition: all 300ms;
+}
+
+.e_agua form{
+    padding: 20px;
+    background-color: #ebf3f5;
+}
+
+.e_agua  select{
+    width: 200px;
+    margin-bottom: 10px;
+    height: 35px;
+}
+
+.e_agua  input{
+    width: 160px;
+    margin-bottom: 10px;
+}
+
+.e_agua form .btn_help{
+    border: 1px solid #a0b3c2;
+    border-radius: 999px;
+    padding: 5px;
+    margin-left: 6px;
+}
+
+.e_agua form .btn_help i{
+    color: #a0b3c2;
+}
+
+.footer{
+    width: 230px;
+    height: 47px;
+    background-color: yellow;
+}
+
+.footer .btn_submit{
+    border: none;
+    line-height: 47px;
+    background-color: yellow;
+    width: 100%; 
+}
+
+@media(max-width: 992px){
+    .tarjeta{
+     width: 230px;
+     min-height: 230px;
+    }
+    .imagen img{
+        width: 230px;
+        height: 140px;
+    }
+
+    .descripcion{
+        background-color: #eee;
+        height: 90px;
+        text-align: center;
+    }
+
+   }

@@ -1,0 +1,34 @@
+export const LISTA_BANCOS: any [] = [
+    {
+    id:1,
+    path:'./../../../../assets/b_estado.jpg'
+},
+{
+    id:2,
+    path:'./../../../../assets/b_chile.jpg'
+},
+{
+    id:3,
+    path:'./../../../../assets/b_security.jpg'
+},
+{
+    id:4,
+    path:'./../../../../assets/b_bci.jpg'
+},
+{
+    id:5,
+    path:'./../../../../assets/b_ripley.jpg'
+},
+{
+    id:6,
+    path:'./../../../../assets/b_scotiabank.jpg'
+},
+{
+    id:7,
+    path:'./../../../../assets/b_estado.jpg'
+},
+{
+    id:8,
+    path:'./../../../../assets/b_estado.jpg'
+}
+]

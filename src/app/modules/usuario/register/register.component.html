@@ -1,0 +1,60 @@
+<div class="contenedor">
+    <div class="seccion1">
+        <div class="top mt-5">
+            <h1 class="text-white">¿Como te llamas?</h1>
+            <p class="text-white">Las personas antes que los números. Te llamaremos por tu nombre. </p>
+            <div class="box">
+                <div class="row">
+                    <div class="col-md-4">
+                        <input type="text" name="" id="" class="form-control" placeholder="Nombre">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" name="" id="" class="form-control" placeholder="Apellidos">
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn_pago">Continuar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="seccion2">
+        <div class="top mt-5">
+            <h1>¿Cual es tu rut?</h1>
+            <div class="box_rut mt-4 mb-4">
+                <input type="text" name="" id="" class="input_rut" placeholder="RUT">
+                <button class="boton_search">Continuar</button>
+            </div>
+            <p>Usaremos tu R.U.T. para crearte una cuenta y asociar servicios.</p>
+        </div>
+    </div>
+    <div class="seccion3">
+        <div class="top mt-5">
+            <h1 class="text-white">¿En que región y comuna vives?</h1>
+            <p class="text-white">Puedes pagar servicios dentro de todo Chile, por lo que necesitamos saber en qué zona vives para que nuestras sugerencias y promociones tengan sentido para tí.</p>
+            <div class="box_residencia">
+                <div class="region ">
+                    <div class="form-group">
+                        <label for="">Vivo en la región </label>
+                        <select name="" id="" #region (change)="getComunasByNombre(region.value)" class="form-control select_region">
+                            <option *ngFor="let region of regiones; let i = index" value="{{region.region}}">{{region.region}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="comuna ">
+                    <div class="form-group">
+                        <label for="">En la comuna de </label>
+                        <select name="" id="" class="form-control select_comuna" >
+                            <option *ngFor="let comuna of comunas" value="">{{comuna}}</option>
+                        </select>
+                    </div>
+                    <div class="submit">
+                        <button class="btn btn_pago" [disabled]="!enabledBtnRegion">Continuar</button>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>

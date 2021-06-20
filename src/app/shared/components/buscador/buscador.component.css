@@ -1,0 +1,196 @@
+.contenedor{
+    background-image: url('../../../../assets/playa.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 560px;
+    float: right;
+    width: 60%;
+}
+
+
+.descripcion{
+    text-align: center;
+    padding: 40px;
+    
+}
+
+.descripcion .titulo{
+    font-size: 60px;
+    color: white;
+    text-shadow: 3px 3px 1px black;
+}
+
+.descripcion .subtitulo{
+    color: white;
+    font-size: 27px;
+    text-shadow: 3px 3px 1px black;
+}
+
+.buscador{
+    width: 70%;
+    margin: 0px auto;
+    background-color: black;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.buscador input[type=search]{
+    padding: 15px;
+    font-size: 20px;
+    color: #08788c;
+}
+
+.buscador ul{
+    margin-top: 10px;
+    text-align: left;
+}
+
+.buscador ul li {
+    float: left;
+    text-decoration: none;
+    list-style: none;
+}
+
+.buscador ul li a{
+    margin-right: 20px;
+    color: white;
+}
+
+.boton_search{
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: none;
+    background-color: #08788c;
+    transition: all 300ms;
+}
+
+.boton_search:hover{
+    background-color: yellow;
+}
+
+.boton_search i{
+    color: white;
+    font-size: 30px;
+}
+
+.buscador .item_resaltado{
+    cursor: pointer;
+}
+
+.buscador .item_resaltado:hover{
+    background-color: #08788c;
+}
+
+@media (max-width:992px) {
+
+    .contenedor{
+        float: none;
+        margin: 0px;
+        border: none;
+        height: 400px;
+        width: 100%;
+    }
+
+    .buscador{
+        width: 80%;
+    }
+
+    .buscador ul{
+        margin-top: 5px;
+        text-align: left;
+    }
+
+    .buscador ul li a{
+        margin-right: 11px;
+        font-size: 14px;
+    }
+
+    .descripcion{
+        text-align: center;
+        padding: 20px;
+        
+    }
+
+    .descripcion .titulo{
+        font-size: 40px;
+        color: white;
+        text-shadow: 3px 3px 1px black;
+    }
+    
+}
+
+@media (max-width: 822px) {
+    .boton_search{
+        padding: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border: none;
+        background-color: #08788c;
+        transition: all 300ms;
+    }
+}
+
+@media (max-width:768px) {
+
+    .contenedor{
+        float: none;
+    }
+
+    .boton_search{
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .boton_search{
+        width: 100%;
+    }
+
+    .buscador input[type=search]{
+        padding: 5px;
+        font-size: 15px;
+
+    }
+}
+
+@media (max-width:576px){
+    /* .boton_search{
+        width: 100%;
+    } */
+
+    .descripcion .subtitulo{
+        font-size: 15px;
+    }
+
+    .buscador ul li a{
+        display: none;
+    }
+}
+
+@media (max-width: 415px) {
+    .contenedor{
+        background-repeat: repeat;
+    }
+}
+
+@media (max-width: 412px) {
+    .contenedor{
+        background-repeat: repeat;
+    }
+
+    
+}
+
+@media(max-width: 360px){
+    .contenedor{
+        background-repeat: repeat;
+        height: 500px;
+    }
+
+    .buscador input[type=search]{
+        font-size: 15px;
+    }
+}

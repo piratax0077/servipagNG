@@ -1,0 +1,43 @@
+<div class="contenedor">
+    <div class="descripcion">
+        <p class="titulo">¿Qué quieres pagar?</p>
+        <p class="subtitulo">Ahorra tiempo y paga en un solo lugar más de 300 servicios</p>
+    </div>
+    
+    <div class="buscador">
+        <div class="row">
+            <div class="col-md-10">
+                <input type="search" name="" id="" class="form-control" [(ngModel)]="searchText" placeholder="Buscar por servicio o empresa" >
+                <ul class="list-group list-group-flush" *ngIf="searchText !== '' " >
+                    <li class="list-group-item item_resaltado" *ngFor="let service of allServices | filterServicios: searchText" (click)="getService(service)"> {{service.descripcion}}</li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="boton_search "><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+        
+        <ul>
+            <li>
+                <a href="">Todas</a>
+            </li>
+            <li>
+                <a href="">Más pagadas</a>
+            </li>
+            <li>
+                <a href="">Servigiros</a>
+            </li>
+            <li>
+                <a href="">Pago TAG</a>
+            </li>
+            <li>
+                <a href="">Recargas</a>
+            </li>
+            <li>
+                <a href="">SOAP 2021</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="clearfix"></div>
+

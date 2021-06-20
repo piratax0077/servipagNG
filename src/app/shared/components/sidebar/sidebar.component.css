@@ -1,0 +1,195 @@
+.contenedor{
+    min-width: 300px;
+    min-height: 538px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.titulo{
+    line-height: 47px;
+    background-color: #ffdd00
+}
+
+.titulo span{
+    font-weight: bold;
+}
+
+.cuentas_por_pagar{
+    width: 366px;
+    min-height: 165px;
+    background-color: #ebf3f5;
+}
+
+.cuentas_por_pagar i{
+    font-size: 40px;
+    padding-top: 50px;
+}
+
+.cuentas_por_pagar ul li{
+    list-style: none;
+}
+
+.cuentas_por_pagar .i_close{
+    padding-top: 0px;
+    font-size: 16px;
+}
+
+.cuentas_por_pagar .list_item_deuda{
+    width: 90%; 
+    float: left;
+}
+
+.cuentas_por_pagar .list_item_deuda .drop{
+    width: 0%; 
+    float: right;
+}
+
+
+.total_a_pagar{
+    width: 366px;
+    height: 326px;
+    background-color: #253646;
+}
+
+.total_a_pagar .subtitulo{
+    width: 90%;
+    margin: 0px auto;
+    color: white;
+    padding-top: 20px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    border-bottom: 1px solid white;
+}
+
+.btn_pagar_con_go{
+    width: 90%;
+    margin: 0px auto;
+    background-color: #fff;
+    padding: 5px;
+    border: none;
+    margin-top: 15px;
+    color: #08788c;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.btn_pagar_con_go:hover{
+    background-color: #08788c;
+    color: #fff;
+}
+
+.lista_bancos_disponibles{
+    width: 90%;
+    margin: 0px auto;
+    padding-top: 10px;
+}
+
+.lista_bancos_disponibles .logo_banco{
+    width: 31px;
+    height: 30px;
+    margin: 5px;
+}
+
+
+.total_a_pagar .info p{
+    color: #fff;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.pagar_otros_medios{
+    width: 90%;
+    margin: 0px auto;
+    border-top: 1px solid #08788c;
+}
+
+.pagar_otros_medios .btn_pagar{
+    background-color: #ffdd00;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.pagar_otros_medios .btn_pagar:hover{
+    background-color:#08788c;
+    color: #fff;
+}
+
+@media (max-width: 737px) {
+    .cuentas_por_pagar, .total_a_pagar{
+        width: 515px;
+    }
+}
+
+@media (max-width: 668px) {
+    .cuentas_por_pagar{
+        width: 506px;
+    }
+
+    .total_a_pagar{
+        width: 506px;
+    }
+}
+
+@media (max-width: 412px) {
+    .cuentas_por_pagar{
+        width: 306px;
+    }
+
+    .total_a_pagar{
+        width: 306px;
+        height: 368px;
+    }
+}
+
+@media (max-width: 376px) {
+    .cuentas_por_pagar{
+        width: 271px;
+    }
+
+    .total_a_pagar{
+        width: 271px;
+        height: 370px;
+    }
+}
+
+@media(max-width: 361px){
+    .cuentas_por_pagar{
+        width: 265px;
+        max-height: 165px;
+    }
+
+    .cuentas_por_pagar .list_item_deuda{
+        width: 80%;
+    }
+
+    .cuentas_por_pagar i{
+        padding-top: 30px;
+    }
+
+    .total_a_pagar{
+        width: 265px;
+    }
+
+    .total_a_pagar .subtitulo{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .pagar_otros_medios .btn_pagar{
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 321px) {
+    .contenedor{
+        min-width: 278px;
+    }
+}

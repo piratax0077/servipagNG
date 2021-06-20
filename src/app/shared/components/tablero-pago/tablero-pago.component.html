@@ -1,0 +1,137 @@
+
+    <div class="row" style="width: 100%;">
+        <div class="col-md-4"  *ngFor="let empresa of empresas_data">
+            <div class="tarjeta"  id={{empresa.id}} >
+                <div class="imagen" (click)="getForm(empresa.id)">
+                    <img src="{{empresa.path}}" alt="" >
+                </div>
+                <div class="descripcion">
+                    <p>{{empresa.descripcion}}</p>
+                </div>
+                
+            </div>
+            <div class="tarjeta"  [ngStyle]="{'display' : empresa.id === 1 ? 'block' : 'none'}" *ngIf="display">
+                <div class="e_agua" >
+                    <div class="titulo">
+                        <i class="fas fa-tint"></i>
+                        <p>Agua</p>
+                    </div>
+                    
+                    <form action="">
+                        <input type="hidden" name="" value="1" [(ngModel)]="pago.idServicio" [ngModelOptions]="{standalone: true}">
+                        <select name="" id="" [(ngModel)]="pago.idEmpresa" [ngModelOptions]="{standalone: true}">
+                            <option *ngFor="let empresa of empresas_agua" value="{{empresa.id}}">{{empresa.descripcion}}</option>
+                        </select>
+                        <div class="form-group">
+                            <input type="text" name="" id="" placeholder="Numero del cliente" [(ngModel)]="pago.nCliente" [ngModelOptions]="{standalone: true}">
+                            <button class="btn_help"><i class="fas fa-question"></i></button>
+                        </div>
+                        
+                    </form>
+                    <div class="footer">
+                        <input type="submit" value="Continuar" [disabled]="pago.nCliente === 0 || !enabled" class="btn_submit" (click)="pagarServicio(pago)">
+                    </div>
+                </div>
+                
+            </div>
+            <div class="tarjeta"  [ngStyle]="{'display' : empresa.id === 2 ? 'block' : 'none'}" *ngIf="display_luz">
+                <div class="e_agua" >
+                    <div class="titulo">
+                        <i class="far fa-lightbulb"></i>
+                        <p>Luz</p>
+                    </div>
+                    
+                    <form action="">
+                        <input type="hidden" name="" value="2" [(ngModel)]="pagoLuz.idServicio" [ngModelOptions]="{standalone: true}">
+                        <select name="" id="" [(ngModel)]="pagoLuz.idEmpresa" [ngModelOptions]="{standalone: true}">
+                            <option *ngFor="let empresa of empresas_luz" value="{{empresa.id}}">{{empresa.descripcion}}</option>
+                        </select>
+                        <div class="form-group">
+                            <input type="text" name="" id="" placeholder="Numero del cliente" [(ngModel)]="pagoLuz.nCliente" [ngModelOptions]="{standalone: true}">
+                            <button class="btn_help"><i class="fas fa-question"></i></button>
+                        </div>
+                        
+                    </form>
+                    <div class="footer">
+                        <input type="submit" value="Continuar" [disabled]="pagoLuz.nCliente === 0 || !enabledLuz" class="btn_submit" (click)="pagarServicio(pagoLuz)">
+                    </div>
+                </div>
+                
+            </div>
+            <div class="tarjeta"  [ngStyle]="{'display' : empresa.id === 3 ? 'block' : 'none'}" *ngIf="display_telefonia">
+                <div class="e_agua" >
+                    <div class="titulo">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>Telefonía</p>
+                    </div>
+                    
+                    <form action="">
+                        <input type="hidden" name="" value="3" [(ngModel)]="pagoTelefonia.idServicio" [ngModelOptions]="{standalone: true}">
+                        <select name="" id="" [(ngModel)]="pagoTelefonia.idEmpresa" [ngModelOptions]="{standalone: true}" >
+                            <option *ngFor="let empresa of empresas_telefonia" value="{{empresa.id}}">{{empresa.descripcion}}</option>
+                        </select>
+                        <div class="form-group">
+                            <input type="text" name="" id="" placeholder="Numero del cliente" [(ngModel)]="pagoTelefonia.nCliente" [ngModelOptions]="{standalone: true}">
+                            <button class="btn_help"><i class="fas fa-question"></i></button>
+                        </div>
+                        
+                    </form>
+                    <div class="footer">
+                        <input type="submit" value="Continuar" [disabled]="pagoTelefonia.nCliente === 0 || !enabledTelefonia" class="btn_submit" (click)="pagarServicio(pagoTelefonia)">
+                    </div>
+                </div>
+                
+            </div>
+            <div class="tarjeta"  [ngStyle]="{'display' : empresa.id === 4 ? 'block' : 'none'}" *ngIf="display_autopista">
+                <div class="e_agua" >
+                    <div class="titulo">
+                        <i class="fas fa-road"></i>
+                        <p>Autopista</p>
+                    </div>
+                    
+                    <form action="">
+                        <input type="hidden" name="" value="4" [(ngModel)]="pagoAutopista.idServicio" [ngModelOptions]="{standalone: true}">
+                        <select name="" id="" [(ngModel)]="pagoAutopista.idEmpresa" [ngModelOptions]="{standalone: true}" >
+                            <option *ngFor="let empresa of empresas_autopista" value="{{empresa.id}}">{{empresa.descripcion}}</option>
+                        </select>
+                        <div class="form-group">
+                            <input type="text" name="" id="" placeholder="Numero del cliente" [(ngModel)]="pagoAutopista.nCliente" [ngModelOptions]="{standalone: true}">
+                            <button class="btn_help"><i class="fas fa-question"></i></button>
+                        </div>
+                        
+                    </form>
+                    <div class="footer">
+                        <input type="submit" value="Continuar" class="btn_submit" [disabled]="pagoAutopista.nCliente === 0 || !enabledAutopista" (click)="pagarServicio(pagoAutopista)">
+                    </div>
+                </div>
+                
+            </div>
+            <div class="tarjeta"  [ngStyle]="{'display' : empresa.id === 5 ? 'block' : 'none'}" *ngIf="display_alimentos">
+                <div class="e_agua" >
+                    <div class="titulo">
+                        <i class="fas fa-utensils"></i>
+                        <p>Alimentos</p>
+                    </div>
+                    
+                    <form action="">
+                        <input type="hidden" name="" value="5" [(ngModel)]="pagoAlimento.idServicio" [ngModelOptions]="{standalone: true}">
+                        <select name="" id="" [(ngModel)]="pagoAlimento.idEmpresa" [ngModelOptions]="{standalone: true}" >
+                            <option *ngFor="let empresa of empresas_alimento" value="{{empresa.id}}">{{empresa.descripcion}}</option>
+                        </select>
+                        <div class="form-group">
+                            <input type="text" name="" id="" placeholder="Numero del cliente" [(ngModel)]="pagoAlimento.nCliente" [ngModelOptions]="{standalone: true}">
+                            <button class="btn_help"><i class="fas fa-question"></i></button>
+                        </div>
+                        
+                    </form>
+                    <div class="footer">
+                        <input type="submit" value="Continuar" class="btn_submit" [disabled]="pagoAlimento.nCliente === 0 || !enabledAlimento" (click)="pagarServicio(pagoAlimento)">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+
+

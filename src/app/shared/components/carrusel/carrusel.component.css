@@ -1,0 +1,20 @@
+.contenedor{
+    float: left;
+    width: 40%;
+}
+
+@media (max-width:992px) {
+
+    .contenedor{
+        display: none;
+    }
+    
+}
+
+@media (max-width:768) {
+
+    .contenedor{
+        float: none;
+    }
+    
+}
