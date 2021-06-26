@@ -1,0 +1,83 @@
+<div class="contenedor">
+    <div class="seccion1">
+        <div class="top mt-5">
+            <h1 class="text-white">¿Como te llamas?</h1>
+            <p class="text-white">Las personas antes que los números. Te llamaremos por tu nombre. </p>
+            <div class="box">
+                <form [formGroup]="formSeccion1" (ngSubmit)="sendSeccion1()">
+                <div class="row">
+                    <div class="col-md-4">
+                        <input type="text" name="" class="form-control" placeholder="Nombre"  formControlName="nombre" [ngClass]="{'border_red' : form.nombre.errors?.required || form.nombre.errors?.minlength}">
+                        <!-- <div class="invalid-feedback d-block" *ngIf="form.nombre.errors && form.nombre.dirty">
+                            <div *ngIf="form.nombre.errors.required">Este campo es requerido</div>
+                            <div *ngIf="form.nombre.errors.minlength">Este campo debe tener mínimo 6 caractéres</div>
+                        </div> -->
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" name="" id="" class="form-control" placeholder="Apellidos" formControlName="apellidos" [ngClass]="{'border_red' : form.apellidos.errors?.required }">
+                        
+                    </div>
+                    <div class="col-md-4">
+                        <button [disabled]="formSeccion1.invalid" class="btn btn_pago">Continuar</button>
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div class="seccion2">
+        <div class="top mt-5">
+            <h1>¿Cual es tu rut?</h1>
+            <form [formGroup]="formSeccion2" (ngSubmit)="sendSeccion2()">
+            <div class="box_rut mt-4 mb-4">
+                <input type="text" name="" id="" class="input_rut" placeholder="RUT" formControlName="rut" >
+                
+                <button [disabled]="formSeccion2.invalid" class="boton_search">Continuar</button>
+                <div class="invalid-feedback d-block" *ngIf="form2.rut.errors && form2.rut.dirty">
+                    <div *ngIf="form2.rut.errors.required">Campo requerido</div>
+                    <div *ngIf="form2.rut.errors.pattern">Rut incorrecto</div>
+                </div>
+            </div>
+            </form>
+            <p>Usaremos tu R.U.T. para crearte una cuenta y asociar servicios.</p>
+        </div>
+    </div>
+    <div class="seccion3">
+        <div class="top mt-5">
+            <h1 class="text-white">¿En que región y comuna vives?</h1>
+            <p class="text-white">Puedes pagar servicios dentro de todo Chile, por lo que necesitamos saber en qué zona vives para que nuestras sugerencias y promociones tengan sentido para tí.</p>
+            <div class="box_residencia">
+                <form [formGroup]="formSeccion3" (ngSubmit)="sendSeccion3()">
+                <div class="region ">
+                    <div class="form-group">
+                        <label for="">Vivo en la región </label>
+                        <select name="" id="" #region (change)="getComunasByNombre(region.value)" class="form-control select_region" formControlName="region" >
+                            <option *ngFor="let region of regiones; let i = index" value="{{region.region}}">{{region.region}}</option>
+                        </select>
+                        
+                    </div>
+                    <div class="invalid-feedback d-block" *ngIf="form3.region.errors && form3.region.dirty">
+                        <div *ngIf="form3.region.errors.required">Este campo es requerido</div>
+                    </div>
+                </div>
+                <div class="comuna ">
+                    <div class="form-group">
+                        <label for="">En la comuna de </label>
+                        <select name="" id="" class="form-control select_comuna" #comuna (change)="getComuna(comuna.value)" formControlName="comuna" >
+                            <option *ngFor="let comuna of comunas; let i = index" value="{{comuna}}">{{comuna}}</option>
+                        </select>
+                        
+                    </div>
+                    <div class="invalid-feedback d-block" *ngIf="form3.comuna.errors && form3.region.dirty">
+                        <div *ngIf="form3.comuna.errors.required">Este campo es requerido</div>
+                    </div>
+                    <div class="submit">
+                        <button class="btn btn_pago" [disabled]="formSeccion3.invalid" >Continuar</button>
+                    </div>
+                    
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>

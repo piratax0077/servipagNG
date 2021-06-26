@@ -38,6 +38,10 @@ ul li a:hover{
     color: #fff;
 }
 
+.icons a:hover i{
+    color: #ffdd00;
+}
+
 .creditos {
     background-color: #ffdd00;
 }

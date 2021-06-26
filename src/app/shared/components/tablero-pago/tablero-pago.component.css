@@ -4,7 +4,7 @@
 }
 .tarjeta{
     width: 100%;
-    min-height: 230px;
+    min-height: 227px;
     cursor: pointer;
     margin-bottom: 10px;
 }
@@ -68,7 +68,7 @@
 }
 
 .e_agua  input{
-    width: 160px;
+    width: 148px;
     margin-bottom: 10px;
 }
 
@@ -84,7 +84,7 @@
 }
 
 .footer{
-    width: 230px;
+    width: 227px;
     height: 47px;
     background-color: yellow;
 }

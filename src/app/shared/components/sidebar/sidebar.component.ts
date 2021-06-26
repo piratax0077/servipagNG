@@ -57,9 +57,13 @@ export class SidebarComponent implements OnInit, OnChanges {
   }
 
   removePago(pago: Pago){
-    this.restarDeudaTotal(pago.deudaTotal);
-    let index = this.pagos.indexOf(pago);
-    this.api.pagos.splice(index,1);
+    let opt = confirm('¿Está seguro de querer eliminar esta cuenta?');
+    if(opt){
+      this.restarDeudaTotal(pago.deudaTotal);
+      let index = this.pagos.indexOf(pago);
+      this.api.pagos.splice(index,1);
+    }
+    
   }
 
   restarDeudaTotal(valorDeuda: number){

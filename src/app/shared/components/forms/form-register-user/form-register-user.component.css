@@ -13,7 +13,7 @@
 }
 
 .seccion1{
-    background-image: url('../../../../assets/playa.jpg');
+    background-image: url('../../../../../assets/playa.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -67,7 +67,7 @@
 }
 
 .seccion3{
-    background-image: url('../../../../assets/playa_rocosa.jpg');
+    background-image: url('../../../../../assets/playa_rocosa.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -110,6 +110,16 @@ margin: 0px auto;
     float: right;
     margin-top: 30px;
     margin-left: 300px;
+}
+
+/* Globales */
+
+.border_red{
+    border: 1px solid red;
+}
+
+.border_green{
+    border: 1px solid green;
 }
 
 @media (max-width: 732px) {

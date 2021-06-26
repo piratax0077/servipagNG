@@ -1,0 +1,23 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+       
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellidos</th>
+        <th scope="col">rut</th>
+        <th scope="col">Región</th>
+        <th scope="col">Ciudad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        
+        <td>{{user.nombre}}</td>
+        <td>{{user.apellidos}}</td>
+        <td>{{user.rut}}</td>
+        <td>{{user.idRegion}}</td>
+        <td>{{user.idCiudad}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
