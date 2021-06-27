@@ -75,7 +75,46 @@ header{
 
 .menu_right .btn_pago:hover{
     background-color: #fdfcf8;
+}
 
+/* -----------------------------------------------Modal CSS--------------------------------------------------------------  */
+
+.modal-header{
+    background-color: #ffdb05;
+    color: black;
+}
+
+.modal-body, .modal-footer{
+    display: block;
+    background-color: #1b2838;
+    text-align: center;
+}
+
+form{
+    width: 80%;
+    margin: 0px auto;
+}
+
+
+form input[type="submit"]{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.modal-footer a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.modal-footer a:hover{
+    color: #ffdb05;
+}
+
+.close{
+    background-color: #ffdb05;
+    font-size: 25px;
+    border: none;
 }
 
 @media (max-width: 1367px){

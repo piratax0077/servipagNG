@@ -32,8 +32,57 @@
 
     </div>
     <div class="menu_right">
-        <button class="btn_servipag">Mi servipag</button>
+        <button type="button" class="btn_servipag" data-toggle="modal" data-target="#miServipagLogin" [disabled]="user === null">Mi servipag</button>
         <button class="btn_pago" [routerLink]="['/pago/home/pagoenlinea']">Pago rápido</button>
     </div>
 
 </header>
+
+<!-- Modal -->
+<div class="modal fade" id="miServipagLogin" tabindex="-1" role="dialog" aria-labelledby="miServipagLoginLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="miServipagLoginLabel">Ingresa a Mi Servipag</h5>
+          <button type="button" #closebutton class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="alert alert-danger" role="alert" *ngIf="error">
+                {{error}}
+              </div>
+            <form [formGroup]="formLogin" (ngSubmit)="login()">
+                <div class="form-group mb-3">
+                    <input type="email" name="" id="" class="form-control" formControlName="email" placeholder="Ingrese su Email">
+                    <div class="invalid-feedback d-block" *ngIf="form.email.errors && form.email.dirty">
+                        <div *ngIf="form.email.errors.required">Campo requerido</div>
+                        <div *ngIf="form.email.errors.email">Email incorrecto</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                  <input type="password" name="" id="" class="form-control" formControlName="password" minlength="6" placeholder="Ingrese su password">
+                  <div class="invalid-feedback d-block" *ngIf="form.password.errors && form.password.dirty">
+                    <div *ngIf="form.password.errors.required">Campo requerido</div>
+                    <div *ngIf="form.password.errors.minlength">Contraseña invalida</div>
+                </div>
+              </div>
+              <input type="submit" [disabled]="formLogin.invalid" value="Ingresar" class="btn btn_pago">
+            </form>
+          
+        </div>
+        <div class="modal-footer">
+            <div class="row" style="width: 100%;">
+                <div class="col-md-6">
+                    <a href="">¿Olvidaste tu contraseña?</a>
+                </div>
+                <div class="col-md-6">
+                    <a href="">¿Aún no estas registrado?</a>
+                </div>
+            </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>

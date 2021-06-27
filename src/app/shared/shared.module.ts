@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { RegisterComponent } from '../modules/usuario/register/register.component';
 import { UserListComponent } from '../modules/usuario/user-list/user-list.component';
 import { TableUserComponent } from './components/table-user/table-user.component';
+import { IndicadoresEconomicosComponent } from './components/indicadores-economicos/indicadores-economicos.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TableUserComponent } from './components/table-user/table-user.component
     RegisterComponent,
     UserListComponent,
     FilterServiciosPipe,
-    TableUserComponent
+    TableUserComponent,
+    IndicadoresEconomicosComponent
   ],
   imports: [
     CommonModule,

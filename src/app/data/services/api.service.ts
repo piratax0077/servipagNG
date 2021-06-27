@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { iTableroPago } from 'src/app/shared/components/tablero-pago/tablero-pago.interface';
+import { Login } from 'src/app/shared/models/login';
 import { Pago } from 'src/app/shared/models/pago';
 import { User } from 'src/app/shared/models/user';
 import { EMPRESAS_DATA } from '../constanst/empresas.const';
@@ -14,6 +16,7 @@ export class ApiService {
   public allServices: Array<iTableroPago>;
   public deudaTotal: number;
   public users: Array<User>;
+  public userLogged: any;
 
   constructor() { 
     this.pagos = [];
@@ -30,12 +33,27 @@ export class ApiService {
     return this.deudaTotal;
   }
 
+  getUserLogged(){
+    return this.userLogged;
+  }
+
   getUsers(){
     return this.users;
   }
 
-
   getAllServices(){
     return this.allServices;
+  }
+
+  login(userLogin: Login){
+    let email = userLogin.email;
+    let password = userLogin.password;
+
+    if(email === 'francisco@gmail.com' && password === "1234567"){
+      this.userLogged = userLogin;
+      return this.userLogged;
+    }else{
+      return null;
+    }
   }
 }

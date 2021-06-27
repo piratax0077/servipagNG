@@ -6,6 +6,7 @@ import { SubmenuComponent } from "./submenu/submenu.component";
 import { TableroPagoComponent } from "./tablero-pago/tablero-pago.component";
 import { FormRegisterUserComponent } from "./forms/form-register-user/form-register-user.component";
 import { TableUserComponent } from "./table-user/table-user.component";
+import { IndicadoresEconomicosComponent } from "./indicadores-economicos/indicadores-economicos.component";
 
 
 export const components: any[] = [
@@ -15,7 +16,8 @@ export const components: any[] = [
     SubmenuComponent,
     TableroPagoComponent,
     FormRegisterUserComponent,
-    TableUserComponent
+    TableUserComponent,
+    IndicadoresEconomicosComponent
 ]
 
 export * from './buscador/buscador.component';
@@ -25,3 +27,4 @@ export * from './submenu/submenu.component';
 export * from './tablero-pago/tablero-pago.component';
 export * from './forms/form-register-user/form-register-user.component';
 export * from './table-user/table-user.component';
+export * from './indicadores-economicos/indicadores-economicos.component';

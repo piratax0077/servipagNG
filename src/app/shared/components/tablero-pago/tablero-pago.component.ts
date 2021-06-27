@@ -8,6 +8,7 @@ import { ApiService } from 'src/app/data/services/api.service';
 import {EMPRESAS_DATA} from '../../../data/constanst/empresas.const';
 import { Pago } from '../../models/pago';
 import { iTableroPago } from './tablero-pago.interface';
+declare var $: any;
 
 @Component({
   selector: 'app-tablero-pago',
