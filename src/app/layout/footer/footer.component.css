@@ -82,6 +82,10 @@ ul li a:hover{
 }
 
 @media (max-width:992px) {
+    .contenedor{
+        height: 233px;
+    }
+
     .logo{
         margin-left: 80px;
         margin-top: 17px;

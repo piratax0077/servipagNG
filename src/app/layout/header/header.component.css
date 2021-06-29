@@ -121,6 +121,11 @@ form input[type="submit"]{
     .menu_left, .menu_right{
         width: 100%;
     }
+
+    .menu_right{
+        padding-left: 500px;
+    }
+
 }
 
 @media (max-width: 1025px) {

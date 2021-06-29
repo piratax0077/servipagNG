@@ -59,6 +59,7 @@
 .e_agua form{
     padding: 20px;
     background-color: #ebf3f5;
+    width: 229px;
 }
 
 .e_agua  select{
@@ -94,6 +95,98 @@
     line-height: 47px;
     background-color: yellow;
     width: 100%; 
+}
+
+@media (max-width: 1365px) {
+    .e_agua .titulo,
+    .e_agua form,
+    .footer{
+        width: 200px;
+    }
+
+    .e_agua input{
+        width: 127px;
+    }
+
+    .e_agua select{
+        width: 170px;
+        margin-bottom: 6px;
+    }
+
+}
+
+@media (max-width: 1230px) {
+    .e_agua .titulo,
+    .footer,
+    .e_agua form{
+        width: 179px;
+    }
+
+    .e_agua select{
+        width: 150px;
+    }
+
+    .e_agua input{
+        width: 105px;
+    }
+}
+
+@media (max-width: 1201px) {
+    .e_agua .titulo,
+    .e_agua form,
+    .footer{
+        width: 160px;
+    }
+
+    .e_agua input{
+        width: 100px;
+    }
+
+    .e_agua select{
+        width: 144px;
+    }
+
+}
+
+@media (max-width: 1100px) {
+    .e_agua .titulo,
+    .e_agua form
+    .footer{
+        width: 156px;
+    }
+
+    .e_agua .titulo p,
+    .e_agua .titulo i{
+        font-size: 19px;
+    }
+
+    .e_agua select{
+        width: 128px;
+    }
+
+    .e_agua input{
+        width: 80px;
+    }
+}
+
+@media (max-width: 1049px) {
+    .e_agua .titulo,
+    .footer{
+        width: 148px;
+    }
+
+    .e_agua .titulo p,
+    .e_agua .titulo i{
+        font-size: 19px;
+    }
+
+    .e_agua select{
+        width: 120px;
+    }
+
+    .e_agua input{
+        width: 77px;
+    }
 }
 
 @media(max-width: 992px){

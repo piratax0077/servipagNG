@@ -76,6 +76,24 @@
 
 }
 
+@media (max-width: 1367px) {
+    .seccion2 ul li a{
+        font-weight: normal;
+    }
+}
+
+@media (max-width: 992px){
+    .seccion2 ul li{
+        padding: 0%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .seccion2 ul li a{
+        font-size: 13px;
+    }
+}
+
 @media (max-width: 824px) {
 
     .seccion1{

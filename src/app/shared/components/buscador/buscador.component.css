@@ -83,6 +83,17 @@
     background-color: #08788c;
 }
 
+@media (max-width: 1367px) {
+    .buscador ul li a{
+        margin-right: 10px;
+    }
+
+    .boton_search{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
 @media (max-width:992px) {
 
     .contenedor{
@@ -103,7 +114,7 @@
     }
 
     .buscador ul li a{
-        margin-right: 11px;
+        margin-right: 40px;
         font-size: 14px;
     }
 
