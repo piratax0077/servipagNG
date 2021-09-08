@@ -30,7 +30,7 @@ export class FormRegisterUserComponent implements OnInit {
     });
     
     this.formSeccion2 = this.fb.group({
-      rut: ['',[Validators.required]]
+      rut: ['',[Validators.required, Validators.minLength(8)]]
     });
 
     this.formSeccion3 = this.fb.group({

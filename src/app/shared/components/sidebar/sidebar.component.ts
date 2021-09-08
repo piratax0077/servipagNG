@@ -1,4 +1,5 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Observable } from 'rxjs';
 import { LISTA_BANCOS } from 'src/app/data/constanst/listaBancos.const';
 import { ApiService } from 'src/app/data/services/api.service';
 import { Pago } from '../../models/pago';
@@ -14,7 +15,8 @@ export class SidebarComponent implements OnInit, OnChanges {
   @Input() mensaje: string;
 
   public newPago: Pago;
-  public pagos: Array<Pago>;
+  public pagos: Array<Pago> = this.api.getPagos();
+  public pagos$!: Observable<any>;
   public deudaTotal: number;
 
   public lista_bancos: Array<any>;
@@ -36,15 +38,17 @@ export class SidebarComponent implements OnInit, OnChanges {
     this.mensaje = '';
     this.deudaTotal = this.api.deudaTotal;
     this.lista_bancos = LISTA_BANCOS;
-    this.pagos = this.api.getPagos();
-    
+    this.api.pagos = this.pagos;
+    console.log(this.api.pagos);
   }
   ngOnChanges(changes: SimpleChanges): void {
     this.doSomething(this.addPago);
+
   }
 
   ngOnInit(): void {
     // this.pagos = this.api.getPagos();
+    
   }
 
   doSomething(obj: Pago){
@@ -52,8 +56,7 @@ export class SidebarComponent implements OnInit, OnChanges {
     this.deudaTotal += deuda;
 
     this.api.deudaTotal = this.deudaTotal;
-    this.api.pagos = this.pagos;
-    console.log(this.pagos);
+    
   }
 
   removePago(pago: Pago){

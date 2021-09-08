@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { iTableroPago } from 'src/app/shared/components/tablero-pago/tablero-pago.interface';
 import { Login } from 'src/app/shared/models/login';
 import { Pago } from 'src/app/shared/models/pago';
@@ -17,6 +17,7 @@ export class ApiService {
   public deudaTotal: number;
   public users: Array<User>;
   public userLogged: any;
+  private pagos$ = new Subject<any>();
 
   constructor() { 
     this.pagos = [];
@@ -27,6 +28,15 @@ export class ApiService {
 
   getPagos(){
     return this.pagos;
+  }
+
+  setPago(pago: any){
+    this.pagos.push(pago);
+    this.pagos$.next(this.pagos);
+  }
+
+  getPagos$(): Observable<any>{
+    return this.pagos$.asObservable();
   }
 
   getDeudaTotal(){

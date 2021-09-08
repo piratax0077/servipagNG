@@ -30,12 +30,13 @@
             <h1>¿Cual es tu rut?</h1>
             <form [formGroup]="formSeccion2" (ngSubmit)="sendSeccion2()">
             <div class="box_rut mt-4 mb-4">
-                <input type="text" name="" id="" class="input_rut" placeholder="RUT" formControlName="rut" >
+                <input type="text" name="" id="" class="input_rut" placeholder="RUT" formControlName="rut" minlength="8">
                 
                 <button [disabled]="formSeccion2.invalid" class="boton_search">Continuar</button>
                 <div class="invalid-feedback d-block" *ngIf="form2.rut.errors && form2.rut.dirty">
                     <div *ngIf="form2.rut.errors.required">Campo requerido</div>
                     <div *ngIf="form2.rut.errors.pattern">Rut incorrecto</div>
+                    <div *ngIf="form2.rut.errors.minlength">Rut incorrecto</div>
                 </div>
             </div>
             </form>
@@ -72,7 +73,7 @@
                         <div *ngIf="form3.comuna.errors.required">Este campo es requerido</div>
                     </div>
                     <div class="submit">
-                        <button class="btn btn_pago" [disabled]="formSeccion3.invalid" >Continuar</button>
+                        <button class="btn btn_pago" [disabled]="formSeccion3.invalid || formSeccion2.invalid || formSeccion1.invalid" >Continuar</button>
                     </div>
                     
                 </div>

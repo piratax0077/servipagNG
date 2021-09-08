@@ -163,7 +163,7 @@ export class TableroPagoComponent implements OnInit {
     }
 
     if(obj.deudaTotal !== 0){
-      this.api.pagos.push(obj);
+      this.api.setPago(obj);
       this.añadirPago.emit(obj);
       alert('Su cuenta ha sido añadida ');
     }else{

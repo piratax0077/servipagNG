@@ -6,21 +6,11 @@ import { PagoenlineaComponent } from '../modules/pago/pagoenlinea/pagoenlinea.co
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterServiciosPipe } from './pipes/filter-servicios.pipe';
 import { RouterModule } from '@angular/router';
-import { RegisterComponent } from '../modules/usuario/register/register.component';
-import { UserListComponent } from '../modules/usuario/user-list/user-list.component';
-import { TableUserComponent } from './components/table-user/table-user.component';
-import { IndicadoresEconomicosComponent } from './components/indicadores-economicos/indicadores-economicos.component';
+
 
 @NgModule({
   declarations: [
-    ...fromComponents.components,
-    HomeComponent,
-    PagoenlineaComponent,
-    RegisterComponent,
-    UserListComponent,
-    FilterServiciosPipe,
-    TableUserComponent,
-    IndicadoresEconomicosComponent
+    // ...fromComponents.components
   ],
   imports: [
     CommonModule,

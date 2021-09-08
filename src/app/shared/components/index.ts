@@ -1,7 +1,6 @@
 import { BuscadorComponent } from "./buscador/buscador.component";
 import { CarruselComponent } from "./carrusel/carrusel.component";
 
-import { SidebarComponent } from "./sidebar/sidebar.component";
 import { SubmenuComponent } from "./submenu/submenu.component";
 import { TableroPagoComponent } from "./tablero-pago/tablero-pago.component";
 import { FormRegisterUserComponent } from "./forms/form-register-user/form-register-user.component";
@@ -10,13 +9,7 @@ import { IndicadoresEconomicosComponent } from "./indicadores-economicos/indicad
 
 
 export const components: any[] = [
-    BuscadorComponent,
-    CarruselComponent,
-    SidebarComponent,
-    SubmenuComponent,
-    TableroPagoComponent,
-    FormRegisterUserComponent,
-    TableUserComponent,
+    
     IndicadoresEconomicosComponent
 ]
 
